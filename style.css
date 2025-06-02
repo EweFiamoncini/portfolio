@@ -1,0 +1,470 @@
+/* Importação de fontes do Google Fonts (opcional, mas recomendado para uma boa tipografia) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #6c757d; /* Cinza */
+    --dark-color: #343a40; /* Preto quase */
+    --light-color: #f8f9fa; /* Branco quase */
+    --text-color: #212529; /* Preto */
+    --background-color: #ffffff; /* Branco */
+    --gradient-start: #007bff;
+    --gradient-end: #0056b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+/* --- Header e Navegação --- */
+header {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.nav-links {
+    display: flex;
+
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--light-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Burger Menu para mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* --- Seção Hero (Inicial) --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Ocupa pelo menos 70% da altura da viewport */
+}
+
+.hero-content img {
+    width: 70%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    clip-path: circle(50%);
+    margin-top: 100px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: var(--light-color);
+}
+
+.hero-content h1 span {
+    color: var(--light-color); /* Mantenha a cor primária ou mude para um tom mais claro */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: var(--gradient-end);
+    transform: translateY(-2px);
+}
+
+/* --- Seções Gerais (Sobre Mim, Habilidades, Portfólio, Contato) --- */
+section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+section:nth-child(even) { /* Para seções alternadas */
+    background-color: var(--light-color);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Seção Sobre Mim --- */
+.about-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+/* --- Seção Habilidades --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: var(--background-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.skill-item i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-item span {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* --- Seção Portfólio --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin: 20px 20px 10px;
+}
+
+.portfolio-item p {
+    padding: 0 20px 20px;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px 20px;
+}
+
+.btn-project {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-project i {
+    margin-right: 8px;
+}
+
+.btn-project:hover {
+    background-color: var(--gradient-end);
+}
+
+/* --- Seção Contato --- */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.contact-form button {
+    align-self: center;
+    margin-top: 20px;
+}
+
+.social-links {
+    margin-top: 40px;
+    font-size: 2.5rem;
+}
+
+.social-links a {
+    color: var(--dark-color);
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 80px; /* Ajuste para ficar abaixo do header */
+        height: calc(100vh - 80px); /* Ocupa o restante da altura da tela */
+        background-color: var(--dark-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 999; /* Garante que fique acima de outros elementos */
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 25px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    /* Animação dos links ao abrir o menu */
+    .nav-active li {
+        opacity: 1;
+        transition: opacity 0.5s ease-in forwards;
+    }
+
+    .nav-active li:nth-child(1) { transition-delay: 0.2s; }
+    .nav-active li:nth-child(2) { transition-delay: 0.3s; }
+    .nav-active li:nth-child(3) { transition-delay: 0.4s; }
+    .nav-active li:nth-child(4) { transition-delay: 0.5s; }
+
+    /* Animação do burger menu ao abrir */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .skills-grid, .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .skills-grid, .portfolio-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .skill-item {
+        padding: 20px;
+    }
+
+    .skill-item i {
+        font-size: 3rem;
+    }
+
+    .social-links {
+        font-size: 2rem;
+    }
+}
