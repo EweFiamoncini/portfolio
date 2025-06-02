@@ -3,11 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
-    // Toggle Nav
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
 
-        // Animate Links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
@@ -16,18 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Burger Animation
         burger.classList.toggle('toggle');
     });
 
-    // Close nav when a link is clicked (for single-page navigation)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (nav.classList.contains('nav-active')) {
                 nav.classList.remove('nav-active');
                 burger.classList.remove('toggle');
                 navLinks.forEach(item => {
-                    item.style.animation = ''; // Reset animation
+                    item.style.animation = '';
                 });
             }
         });

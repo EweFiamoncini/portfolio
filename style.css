@@ -1,13 +1,12 @@
-/* Importação de fontes do Google Fonts (opcional, mas recomendado para uma boa tipografia) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-    --primary-color: #007bff; /* Azul vibrante */
-    --secondary-color: #6c757d; /* Cinza */
-    --dark-color: #343a40; /* Preto quase */
-    --light-color: #f8f9fa; /* Branco quase */
-    --text-color: #212529; /* Preto */
-    --background-color: #ffffff; /* Branco */
+    --primary-color: #007bff; 
+    --secondary-color: #6c757d; 
+    --dark-color: #343a40; 
+    --light-color: #f8f9fa; 
+    --text-color: #212529; 
+    --background-color: #ffffff; 
     --gradient-start: #007bff;
     --gradient-end: #0056b3;
 }
@@ -122,7 +121,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh; /* Ocupa pelo menos 70% da altura da viewport */
+    min-height: 70vh;
 }
 
 .hero-content img {
@@ -141,7 +140,7 @@ nav {
 }
 
 .hero-content h1 span {
-    color: var(--light-color); /* Mantenha a cor primária ou mude para um tom mais claro */
+    color: var(--light-color);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -175,7 +174,7 @@ section {
     background-color: var(--background-color);
 }
 
-section:nth-child(even) { /* Para seções alternadas */
+section:nth-child(even) {
     background-color: var(--light-color);
 }
 
@@ -377,21 +376,26 @@ footer {
     .nav-links {
         position: absolute;
         right: 0;
-        top: 80px; /* Ajuste para ficar abaixo do header */
-        height: calc(100vh - 80px); /* Ocupa o restante da altura da tela */
+        top: 75px;
+        height: calc(100vh - 80px);
         background-color: var(--dark-color);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 60%;
+        width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        z-index: 999; /* Garante que fique acima de outros elementos */
+        z-index: 999;
     }
 
     .nav-links li {
         opacity: 0;
-        margin: 25px 0;
+        margin: 30px 0;
+        border-radius: 10px;
+        background-color: var(--secondary-color);
+        padding: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.39);
     }
 
     .burger {
@@ -453,7 +457,7 @@ footer {
     }
 
     .skills-grid, .portfolio-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        grid-template-columns: 1fr;
     }
 
     .skill-item {
