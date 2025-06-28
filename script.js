@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
@@ -29,3 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const anoAtual = new Date().getFullYear();
+document.getElementById('ano-atual').textContent = anoAtual;
