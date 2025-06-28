@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-    --primary-color: #007bff; 
-    --secondary-color: #6c757d; 
-    --dark-color: #343a40; 
-    --light-color: #f8f9fa; 
-    --text-color: #212529; 
-    --background-color: #ffffff; 
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --text-color: #212529;
+    --background-color: #ffffff;
     --gradient-start: #007bff;
     --gradient-end: #0056b3;
 }
@@ -41,7 +41,9 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
     color: var(--dark-color);
@@ -56,7 +58,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -121,16 +123,34 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 100vh;
 }
 
 .hero-content img {
     width: 70%;
-    max-width: 200px;
+    max-width: 400px;
     aspect-ratio: 1/1;
     object-fit: cover;
     clip-path: circle(50%);
     margin-top: 100px;
+    transform: translateX(0px);
+    animation: float 6s ease-out infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*--Efect Float--*/
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .hero-content h1 {
@@ -141,7 +161,7 @@ nav {
 
 .hero-content h1 span {
     color: var(--light-color);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
@@ -160,7 +180,7 @@ nav {
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
@@ -215,13 +235,13 @@ section h2::after {
     background-color: var(--background-color);
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .skill-item i {
@@ -247,13 +267,13 @@ section h2::after {
     background-color: var(--background-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-item img {
@@ -363,6 +383,11 @@ footer {
     font-size: 0.9rem;
 }
 
+/* --- Efeito ScrollReval --- */
+.efect-scroll-reval {
+    visibility: hidden;
+}
+
 /* --- Media Queries para Responsividade --- */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -412,18 +437,31 @@ footer {
         transition: opacity 0.5s ease-in forwards;
     }
 
-    .nav-active li:nth-child(1) { transition-delay: 0.2s; }
-    .nav-active li:nth-child(2) { transition-delay: 0.3s; }
-    .nav-active li:nth-child(3) { transition-delay: 0.4s; }
-    .nav-active li:nth-child(4) { transition-delay: 0.5s; }
+    .nav-active li:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-active li:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-active li:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+
+    .nav-active li:nth-child(4) {
+        transition-delay: 0.5s;
+    }
 
     /* Animação do burger menu ao abrir */
     .toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
+
     .toggle .line2 {
         opacity: 0;
     }
+
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
@@ -437,7 +475,8 @@ footer {
         margin-bottom: 40px;
     }
 
-    .skills-grid, .portfolio-grid {
+    .skills-grid,
+    .portfolio-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
@@ -456,7 +495,8 @@ footer {
         font-size: 0.9rem;
     }
 
-    .skills-grid, .portfolio-grid {
+    .skills-grid,
+    .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
