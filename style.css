@@ -127,12 +127,11 @@ nav {
 }
 
 .hero-content img {
-    width: 70%;
-    max-width: 400px;
+    max-width: 300px;
     aspect-ratio: 1/1;
     object-fit: cover;
     clip-path: circle(50%);
-    margin-top: 100px;
+    margin-top: 15%;
     transform: translateX(0px);
     animation: float 6s ease-out infinite;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -389,13 +388,17 @@ footer {
 }
 
 /* --- Media Queries para Responsividade --- */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    .hero-content img {
+        margin-top: 30%;
     }
 
     .nav-links {
