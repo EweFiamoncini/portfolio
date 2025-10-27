@@ -14,30 +14,35 @@
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
+        <nav aria-label="Navegação Principal">
+            <h1 class="logo">
                 <a href="index.html">
-                    <img src="imagens/logo.png" alt="Ewerton"></a>
-            </div>
+                    <img src="imagens/logo.png" alt="Ewerton" aria-label="Página Inicial - Logo Ewerton">
+                </a>
+            </h1>
+            
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="#about">Sobre Mim</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
-            <div class="burger">
+
+            <button class="burger" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir e Fechar Menu de Navegação">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </nav>
     </header>
 
     <main>
         <section id="hero" class="hero-section efect-scroll-reval">
             <div class="hero-content">
-                <img src="imagens/profile-pic.png" alt="perfil">
+                <figure>
+                    <img src="imagens/profile-pic.png" alt="Foto de perfil de Ewerton, Desenvolvedor Web.">
+                </figure>
                 <h1>Olá, eu sou <span>Ewerton Fiamoncini</span></h1>
                 <p>Desenvolvedor Web Full Stack com foco em criar soluções completas, do back-end ao front-end. Sou dedicado a transformar ideias em interfaces intuitivas e responsivas que encantam os usuários.</p>
                 <a href="#projetos" class="btn">Ver Projetos</a>
@@ -58,99 +63,53 @@
         <section id="skills" class="skills-section efect-scroll-reval">
             <div class="container">
                 <h2>Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
+                <ul class="skills-grid">
+                    <li class="skill-item">
                         <i class="fab fa-html5"></i>
                         <span>HTML5</span>
-                    </div>
-                    <div class="skill-item">
+                    </li>
+                    <li class="skill-item">
                         <i class="fab fa-css3-alt"></i>
                         <span>CSS3</span>
-                    </div>
-                    <div class="skill-item">
+                    </li>
+                    <li class="skill-item">
                         <i class="fab fa-js"></i>
                         <span>JavaScript</span>
-                    </div>
-                    <!--
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-solid fa-database"></i>
-                        <span>SQL</span>
-                    </div>
-                    -->
-                    <div class="skill-item">
+                    </li>
+                    <li class="skill-item">
                         <i class="fab fa-git-alt"></i>
                         <span>Git</span>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section id="projetos" class="portfolio-section efect-scroll-reval">
             <div class="container">
                 <h2>Meus Projetos</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="imagens/projeto1.png" alt="PetShop Conectado">
-                        <h3>PetShop Conectado</h3>
-                        <p>A ideia é criar uma plataforma online completa para um pet shop, focando em otimizar a
-                            comunicação com os clientes e facilitar o agendamento de serviços.</p>
-                        <div class="project-links">
-                            <a href="https://lovely-cat-0f6496.netlify.app/" target="_blank" class="btn-project"><i
-                                    class="fas fa-external-link-alt"></i> Ver Online</a>
-                            <a href="https://github.com/EweFiamoncini/petshop-conectado" target="_blank"
-                                class="btn-project" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="imagens/projeto2.png" alt="Projeto 2">
-                        <h3>Sistema de Gestão de Funcionários</h3>
-                        <p>Sistema de Gestão de Funcionários em frontend puro (HTML, CSS, JS). Usa localStorage para dados, mostrando habilidades em DOM, validação e gestão de estados.</p>
-                        <div class="project-links">
-                            <a href="https://ewefiamoncini.github.io/gestao-adm/" target="_blank" class="btn-project"><i class="fas fa-external-link-alt"></i> Ver
-                                Online</a>
-                            <a href="https://github.com/EweFiamoncini/gestao-adm" target="_blank" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section efect-scroll-reval">
-            <div class="container">
-                <h2>Entre em Contato</h2>
-                <p>Estou sempre aberto a novas oportunidades e desafios. Se você tem um projeto em mente ou apenas quer
-                    bater um papo, sinta-se à vontade para me contatar!</p>
-                <form action="https://formsubmit.co/ewertonfiamoncini20@gmail.com" method="POST" class="contact-form"
-                    rel="noopener noreferrer" data-form>
-                    <input type="text" name="Nome" placeholder="Seu Nome" required>
-                    <input type="email" name="Email" placeholder="Seu E-mail" required>
-                    <textarea rows="5" name="Mensagem" placeholder="Sua Mensagem" required></textarea>
-                    <button type="submit" class="btn" data-button>Enviar Mensagem</button>
-                </form>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/ewerton-fiamoncini/" target="_blank"
-                        rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/EweFiamoncini" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-github"></i></a>
-                    <a href="mailto:ewertonfiamoncini20@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Copyright &copy; <span id="ano-atual"></span> Ewerton Fiamoncini, todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+                <ul class="portfolio-grid">
+                    <li class="portfolio-item">
+                        <article>
+                            <figure>
+                                <img src="imagens/projeto1.png" alt="Miniatura do projeto PetShop Conectado.">
+                            </figure>
+                            <h3>PetShop Conectado</h3>
+                            <p>A ideia é criar uma plataforma online completa para um pet shop, focando em otimizar a
+                                comunicação com os clientes e facilitar o agendamento de serviços.</p>
+                            <div class="project-links">
+                                <a href="https://lovely-cat-0f6496.netlify.app/" target="_blank" class="btn-project" rel="noopener noreferrer"><i
+                                        class="fas fa-external-link-alt"></i> Ver Online</a>
+                                <a href="https://github.com/EweFiamoncini/petshop-conectado" target="_blank"
+                                    class="btn-project" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="portfolio-item">
+                        <article>
+                            <figure>
+                                <img src="imagens/projeto2.png" alt="Miniatura do projeto Sistema de Gestão de Funcionários.">
+                            </figure>
+                            <h3>Sistema de Gestão de Funcionários</h3>
+                            <p>Sistema de Gestão de Funcionários em frontend puro (HTML, CSS, JS). Usa localStorage para dados,
 
 </html>
