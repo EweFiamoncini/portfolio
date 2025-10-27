@@ -77,13 +77,16 @@ nav {
     color: var(--primary-color);
 }
 
+.logo a {
+    display: block;
+}
+
 .logo img {
     max-width: 200px;
 }
 
 .nav-links {
     display: flex;
-
 }
 
 .nav-links li {
@@ -104,6 +107,10 @@ nav {
 .burger {
     display: none;
     cursor: pointer;
+    background: none; 
+    border: none;
+    padding: 0;
+    outline: none;
 }
 
 .burger div {
@@ -126,14 +133,17 @@ nav {
     min-height: 100vh;
 }
 
-.hero-content img {
+.hero-content figure {
+    margin-top: 15%;
+    transform: translateX(0px);
+    animation: float 6s ease-out infinite;
+}
+
+.hero-content figure img {
     max-width: 300px;
     aspect-ratio: 1/1;
     object-fit: cover;
     clip-path: circle(50%);
-    margin-top: 15%;
-    transform: translateX(0px);
-    animation: float 6s ease-out infinite;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -187,7 +197,6 @@ nav {
     transform: translateY(-2px);
 }
 
-/* --- Seções Gerais (Sobre Mim, Habilidades, Portfólio, Contato) --- */
 section {
     padding: 80px 0;
     background-color: var(--background-color);
@@ -281,12 +290,12 @@ section h2::after {
     display: block;
 }
 
-.portfolio-item h3 {
+.portfolio-item article h3 {
     font-size: 1.5rem;
     margin: 20px 20px 10px;
 }
 
-.portfolio-item p {
+.portfolio-item article p {
     padding: 0 20px 20px;
     font-size: 0.95rem;
     color: var(--secondary-color);
@@ -361,11 +370,17 @@ section h2::after {
 .social-links {
     margin-top: 40px;
     font-size: 2.5rem;
+    display: flex; 
+    justify-content: center;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 0 15px; 
 }
 
 .social-links a {
     color: var(--dark-color);
-    margin: 0 15px;
     transition: color 0.3s ease;
 }
 
@@ -397,8 +412,8 @@ footer {
         font-size: 1rem;
     }
 
-    .hero-content img {
-        margin-top: 30%;
+    .hero-content figure {
+        margin-top: 30%; 
     }
 
     .nav-links {
@@ -513,5 +528,9 @@ footer {
 
     .social-links {
         font-size: 2rem;
+    }
+    
+    .social-links li {
+        margin: 0 10px;
     }
 }
