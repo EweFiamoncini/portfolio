@@ -31,4 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const anoAtual = new Date().getFullYear();
-document.getElementById('ano-atual').textContent = anoAtual;
+    const elementoCopyright = document.querySelector('.copyright');
+
+    if (elementoCopyright) {
+        
+        let textoOriginal = elementoCopyright.textContent;
+        
+        // Expressão regular que encontra e substitui o ano (por exemplo, '2025')
+        const novoTexto = textoOriginal.replace(/\d{4}/, anoAtual); 
+        
+        elementoCopyright.textContent = novoTexto;
+
+    }
