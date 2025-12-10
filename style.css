@@ -53,9 +53,10 @@ h3 {
 header {
     background: var(--dark-color);
     color: var(--light-color);
-    padding: 1rem 0;
     position: fixed;
+    height: 50px;
     top: 0;
+    padding: 5px;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -73,16 +74,12 @@ nav {
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.8rem;
+    color: var(--light-color);
+    margin: auto 0;
+}
+
+.logo strong {
     color: var(--primary-color);
-}
-
-.logo a {
-    display: block;
-}
-
-.logo img {
-    max-width: 200px;
 }
 
 .nav-links {
