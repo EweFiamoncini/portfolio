@@ -425,21 +425,21 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 60%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 1000;
     }
 
     .nav-links a {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         display: block;
         text-align: center;
-        width: 150px;
+        width: 140px;
         background-color: var(--secondary-color);
         padding: 10px;
         border-radius: 5px;
-        margin: 20px;
+        margin: 20px 0;
         transition: transform 0.2s ease;
     }
 
