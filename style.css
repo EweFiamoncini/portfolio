@@ -133,6 +133,9 @@ nav {
     margin-top: 15%;
     transform: translateX(0px);
     animation: float 6s ease-out infinite;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 3px solid gold;
 }
 
 .hero-content figure img {
@@ -145,16 +148,11 @@ nav {
 
 /*--Efect Float--*/
 @keyframes float {
-    0% {
+    0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
-        transform: translateY(-60px);
-    }
-
-    100% {
-        transform: translateY(0px);
+        transform: translateY(-20px);
     }
 }
 
@@ -403,7 +401,7 @@ footer {
 }
 
 /* --- Media Queries para Responsividade --- */
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -413,7 +411,7 @@ footer {
     }
 
     .hero-content figure {
-        margin-top: 30%; 
+        scale: 90%; 
     }
 
     .nav-links {
