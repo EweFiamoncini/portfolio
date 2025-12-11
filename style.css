@@ -130,11 +130,10 @@ nav {
 }
 
 .hero-content figure {
-    margin-top: 15%;
+    margin-top: 10%;
     transform: translateX(0px);
     animation: float 6s ease-out infinite;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 .hero-content figure img {
@@ -148,16 +147,16 @@ nav {
 /*--Efect Float--*/
 @keyframes float {
     0%, 100% {
-        transform: translateY(0px);
+        transform: translateY(10px);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(0px);
     }
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     color: var(--light-color);
 }
 
@@ -168,7 +167,7 @@ nav {
 
 .hero-content p {
     font-size: 1.3rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -192,6 +191,33 @@ nav {
 
 .btn:active {
     transform: scale(0.95);
+}
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+    color: var(--light-color); 
+    font-size: 2rem; 
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down-indicator i {
+    display: block;
+}
+
+/* Keyframes da Animação de Pulo (Bounce) */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-8px);
+    }
 }
 
 section {
@@ -400,7 +426,7 @@ footer {
 }
 
 /* --- Media Queries para Responsividade --- */
-@media (max-width: 800px) {
+@media (max-width: 985px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
