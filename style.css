@@ -199,7 +199,6 @@ nav {
     transform: translateX(-50%);
     color: var(--light-color); 
     font-size: 2rem; 
-    cursor: pointer;
     animation: bounce 2s infinite;
 }
 
