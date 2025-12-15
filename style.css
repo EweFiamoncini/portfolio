@@ -99,6 +99,17 @@ nav {
     color: var(--primary-color);
 }
 
+#progressBar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: var(--primary-color);
+    z-index: 1000;
+    transition: width 0.5s; /* Suaviza a transição da largura */
+}
+
 /* Burger Menu para mobile */
 .burger {
     display: none;
