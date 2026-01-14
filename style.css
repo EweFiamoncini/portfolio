@@ -268,33 +268,15 @@ section h2::after {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 30px;
     text-align: center;
 }
 
 .skill-item {
-    background-color: var(--background-color);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.skill-item i {
-    font-size: 3.5rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.skill-item span {
-    display: block;
-    font-weight: 600;
-    font-size: 1.1rem;
+    transform: scale(1.2);
 }
 
 /* --- Seção Portfólio --- */
