@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo span {
+  color: #00adb5;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: #00adb5;
+  transform: scale(1.1);
+}
+
+#navbar ul li a:active {
+  color: #00adb5;
+  transform: scale(0.95);
+}
+
+/* Container da barra (fixo no fundo do nav) */
+.progress-container {
+  width: 100%;
+  height: 2px;
+  background: transparent; /* Fundo transparente para não poluir */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* A barra que vai crescer */
+.progress-bar {
+  height: 2px;
+  background: #00adb5; /* Cor padrão do seu layout */
+  width: 0%; /* Começa em 0 */
+  transition: width 0.1s ease-out; /* Transição suave */
+  box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
+}
+
+/* Hamburger menu */
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-toggle:focus {
+  outline: 2px solid #00adb5;
+  outline-offset: 4px;
+}
+
+#menu-toggle .bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+  transform-origin: center;
+}
+
+#menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+#menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Nav|Menu Responsive */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: flex;
+  }
+
+  #nav-links {
+    position: fixed;
+    top: 55px;
+    right: -2px;
+    width: 150px;
+    background: rgba(31, 31, 31, 0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: 999;
+  }
+
+  #nav-links.show {
+    transform: translateX(0);
+  }
+
+  #nav-links li {
+    width: 100%;
+  }
+
+  #nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* Hero Section */
+header {
+  height: 100vh;
+  display: flex;
+  padding-top: 150px;
+  padding-left: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  /* Chamada da animação */
+  animation: expandirBackground 20s infinite alternate ease-in-out;
+}
+
+/* Definição da animação */
+@keyframes expandirBackground {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1); /* Expande 10% */
+  }
+}
+
+.hero-content h1 span {
+  color: #00adb5;
+  font-size: 3.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: #00adb5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005f64;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: #00adb5;
+  transform: scale(0.95);
+}
+
+#cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Container da seta */
+.scroll-arrow {
+  position: absolute;
+  bottom: 30px; /* Distância do rodapé da tela */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+/* Desenho da seta usando bordas */
+.scroll-arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #00ced1; /* Cor ciano do seu layout */
+  border-right: 3px solid #00ced1;
+  transform: rotate(45deg);
+  animation: scroll-down 2s infinite;
+}
+
+/* Animação de movimento e fade */
+@keyframes scroll-down {
+  0% {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+}
+
+/* Animação */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* classe */
+.animar-entrada {
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Header Resposive */
+@media (max-width: 810px) {
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Sections */
+section {
+  width: 1000px;
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+}
+
+/* Sections | Responsive */
+@media (max-width: 1000px) {
+  section {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+p{
+  text-align: left;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 50px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 3px solid #00adb5;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transition: 0.2s ease;
+}
+
+.skill-card:hover {
+  border-color: #00adb5;
+  transform: scale(1.1);
+}
+
+/* Card de estudo */
+.skill-card.study {
+  border-color: #f39c12;
+}
+
+/* Projects */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  flex-direction: column;
+  background: #121212;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  padding: 24px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+    display: flex;
+    gap: 12px;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #4f46e5; /* Um roxo mais vivo ou azul */
+}
+
+.project-card h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.project-card p {
+  color: #a1a1aa;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-card a {
+  width: fit-content;
+  color: #818cf8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: auto;
+  transition: 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #4f46e5;
+  transform: scale(1.05);
+}
+
+.project-card a:active {
+  color: #818cf8;
+  transform: scale(0.95);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+  margin-top: 40px;
+}

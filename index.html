@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ewerton | Dev Full-Stack</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/your-code.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <span>&lt;/&gt;</span> Ewerton <span>Fiamoncini</span>
+      </div>
+
+      <!-- Menu hamburguer (aparece em telas pequenas) -->
+      <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+      </ul>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="scrollBar"></div>
+      </div>
+    </nav>
+
+    <header id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-content animar-entrada">
+        <h1>Olá, meu nome é <br /><span>Ewerton Fiamoncini Anssini</span></h1>
+        <p>
+          <span id="typing-text"
+            >Engenheiro de Software | Apaixonado por café e código.</span
+          ><span id="cursor">|</span>
+        </p>
+        <a
+          href="https://docs.google.com/document/d/1SoMZ5R4SLQrzpXea1j3KbTEijebVNRO_9MhpCp2eN5U/edit?usp=sharing"
+          target="_blank"
+          class="btn"
+        >
+          Currículo
+        </a>
+      </div>
+      <div class="scroll-arrow">
+        <a href="#sobre">
+          <span></span>
+        </a>
+      </div>
+    </header>
+
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Atualmente cursando Engenharia de Software, foco meus estudos na criação
+        de interfaces modernas e funcionais. <br />No momento, estou expandindo
+        meus horizontes do Front-end para o Back-end através do
+        <strong>Java</strong>.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Minhas Techs</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="https://skillicons.dev/icons?i=html" />
+        </div>
+        <div class="skill-card">
+          <img src="https://skillicons.dev/icons?i=css" />
+        </div>
+        <div class="skill-card">
+          <img src="https://skillicons.dev/icons?i=js" />
+        </div>
+        <div class="skill-card study">
+          <img src="https://skillicons.dev/icons?i=java" />
+        </div>
+        <div class="skill-card">
+          <img src="https://skillicons.dev/icons?i=git" />
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos Recentes</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <h3>Landpage de PetShop</h3>
+          <p>
+            O <strong>PetShop Conectado</strong> é uma aplicação web
+            desenvolvida para modernizar a interação entre pet shops e seus
+            clientes. O projeto oferece uma interface intuitiva e responsiva,
+            facilitando a visualização de serviços e o contato com tutores de
+            pets.
+          </p>
+          <a
+            href="https://github.com/EweFiamoncini/petshop-conectado"
+            target="_blank"
+            >Ver Repositório</a
+          >
+          <a
+            href="https://ewefiamoncini.github.io/petshop-conectado/"
+            target="_blank"
+            >Ver Online</a
+          >
+        </div>
+        <div class="project-card">
+          <h3>Controle Financeiro Pessoal</h3>
+          <p>
+            Muitas pessoas perdem o controle de suas finanças por utilizarem
+            métodos arcaicos ou planilhas confusas. O
+            <strong>Finanças P. Pro</strong> centraliza o fluxo de caixa,
+            permitindo que o usuário identifique rapidamente "ralos financeiros"
+            e planeje suas economias com base em dados reais.
+          </p>
+          <a href="https://github.com/EweFiamoncini/financP-pro" target="_blank"
+            >Ver Repositório</a
+          >
+          <a href="https://ewefiamoncini.github.io/financP-pro/" target="_blank"
+            >Ver Online</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy;2026 - Developed by <strong>Ewerton Fiamoncini Anssini</strong>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
