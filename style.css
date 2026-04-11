@@ -53,22 +53,22 @@ body {
   transform: scale(0.95);
 }
 
-/* Container da barra (fixo no fundo do nav) */
+/* Progress-Bar */
 .progress-container {
   width: 100%;
   height: 2px;
-  background: transparent; /* Fundo transparente para não poluir */
+  background: transparent;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-/* A barra que vai crescer */
+
 .progress-bar {
   height: 2px;
-  background: #00adb5; /* Cor padrão do seu layout */
-  width: 0%; /* Começa em 0 */
-  transition: width 0.1s ease-out; /* Transição suave */
+  background: #00adb5; 
+  width: 0%; 
+  transition: width 0.1s ease-out;
   box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
 }
 
@@ -172,7 +172,7 @@ header {
   background-position: center;
   z-index: -1;
 
-  /* Chamada da animação */
+  
   animation: expandirBackground 20s infinite alternate ease-in-out;
 }
 
@@ -182,7 +182,7 @@ header {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1); /* Expande 10% */
+    transform: scale(1.1); 
   }
 }
 
@@ -231,18 +231,17 @@ header {
 /* Container da seta */
 .scroll-arrow {
   position: absolute;
-  bottom: 30px; /* Distância do rodapé da tela */
+  bottom: 30px; 
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
 }
 
-/* Desenho da seta usando bordas */
 .scroll-arrow span {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 3px solid #00ced1; /* Cor ciano do seu layout */
+  border-bottom: 3px solid #00ced1;
   border-right: 3px solid #00ced1;
   transform: rotate(45deg);
   animation: scroll-down 2s infinite;
@@ -276,7 +275,6 @@ header {
   }
 }
 
-/* classe */
 .animar-entrada {
   opacity: 0;
   animation: fadeInUp 2s ease-out forwards;

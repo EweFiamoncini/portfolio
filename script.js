@@ -7,7 +7,7 @@ menuToggle?.addEventListener('click', () => {
     menuToggle.classList.toggle('open', isOpen);
 });
 
-// Fecha o menu quando clica em um item (útil em telas pequenas)
+// Close Menu
 navLinks?.addEventListener('click', (event) => {
     if (event.target instanceof HTMLElement && event.target.tagName === 'A') {
         navLinks.classList.remove('show');
@@ -48,7 +48,6 @@ function deleteText() {
     }
 }
 
-// Start the animation by deleting the first text after 2 seconds
 setTimeout(deleteText, 2000);
 
 // Scroll progress bar
