@@ -26,10 +26,14 @@
       </button>
 
       <ul id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#home" data-i18n="nav-home">Home</a></li>
+        <li><a href="#sobre" data-i18n="nav-about">Sobre</a></li>
+        <li><a href="#skills" data-i18n="nav-skills">Habilidades</a></li>
+        <li><a href="#projetos" data-i18n="nav-projects">Projetos</a></li>
+        <button id="language-toggle" aria-label="Alternar idioma">EN</button>
+        <button id="dark-mode-toggle" aria-label="Alternar modo escuro">
+          ☀️
+        </button>
       </ul>
 
       <div class="progress-container">
@@ -40,8 +44,11 @@
     <header id="home">
       <div class="hero-bg"></div>
       <div class="hero-content animar-entrada">
-        <h1>Olá, meu nome é <br /><span>Ewerton Fiamoncini Anssini</span></h1>
-        <p>
+        <h1 data-i18n="hero-greeting">
+          Olá, meu nome é <br /><span class="name">Ewerton</span
+          ><span class="surname"> Fiamoncini Anssini</span>
+        </h1>
+        <p id="typing-container">
           <span id="typing-text"
             >Engenheiro de Software | Apaixonado por café e código.</span
           ><span id="cursor">|</span>
@@ -50,6 +57,7 @@
           href="https://docs.google.com/document/d/1SoMZ5R4SLQrzpXea1j3KbTEijebVNRO_9MhpCp2eN5U/edit?usp=sharing"
           target="_blank"
           class="btn"
+          data-i18n="btn-resume"
         >
           Currículo
         </a>
@@ -62,8 +70,8 @@
     </header>
 
     <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>
+      <h2 data-i18n="about-title">Sobre Mim</h2>
+      <p data-i18n="about-text">
         Atualmente cursando Engenharia de Software, foco meus estudos na criação
         de interfaces modernas e funcionais. <br />No momento, estou expandindo
         meus horizontes do Front-end para o Back-end através do
@@ -72,7 +80,7 @@
     </section>
 
     <section id="skills">
-      <h2>Minhas Techs</h2>
+      <h2 data-i18n="skills-title">Minhas Techs</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <img src="https://skillicons.dev/icons?i=html" />
@@ -93,11 +101,11 @@
     </section>
 
     <section id="projetos">
-      <h2>Projetos Recentes</h2>
+      <h2 data-i18n="projects-title">Projetos Recentes</h2>
       <div class="project-container">
         <div class="project-card">
-          <h3>Landpage de PetShop</h3>
-          <p>
+          <h3 data-i18n="project-1-title">Landpage de PetShop</h3>
+          <p data-i18n="project-1-desc">
             O <strong>PetShop Conectado</strong> é uma aplicação web
             desenvolvida para modernizar a interação entre pet shops e seus
             clientes. O projeto oferece uma interface intuitiva e responsiva,
@@ -107,35 +115,43 @@
           <a
             href="https://github.com/EweFiamoncini/petshop-conectado"
             target="_blank"
+            data-i18n="view-repo"
             >Ver Repositório</a
           >
           <a
             href="https://ewefiamoncini.github.io/petshop-conectado/"
             target="_blank"
+            data-i18n="view-online"
             >Ver Online</a
           >
         </div>
         <div class="project-card">
-          <h3>Controle Financeiro Pessoal</h3>
-          <p>
+          <h3 data-i18n="project-2-title">Controle Financeiro Pessoal</h3>
+          <p data-i18n="project-2-desc">
             Muitas pessoas perdem o controle de suas finanças por utilizarem
             métodos arcaicos ou planilhas confusas. O
             <strong>Finanças P. Pro</strong> centraliza o fluxo de caixa,
             permitindo que o usuário identifique rapidamente "ralos financeiros"
             e planeje suas economias com base em dados reais.
           </p>
-          <a href="https://github.com/EweFiamoncini/financP-pro" target="_blank"
+          <a
+            href="https://github.com/EweFiamoncini/financP-pro"
+            target="_blank"
+            data-i18n="view-repo"
             >Ver Repositório</a
           >
-          <a href="https://ewefiamoncini.github.io/financP-pro/" target="_blank"
+          <a
+            href="https://ewefiamoncini.github.io/financP-pro/"
+            target="_blank"
+            data-i18n="view-online"
             >Ver Online</a
           >
         </div>
       </div>
     </section>
 
-    <footer>
-      &copy;2026 - Developed by <strong>Ewerton Fiamoncini Anssini</strong>
+    <footer data-i18n="footer-text">
+      &copy;2026 - Desenvolvido por <strong>Ewerton Fiamoncini Anssini</strong>
     </footer>
 
     <script src="script.js"></script>
