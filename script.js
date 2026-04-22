@@ -43,7 +43,7 @@ const translations = {
     'btn-resume': 'Currículo',
     'about-title': 'Sobre Mim',
     'about-text':
-      'Me chamo Ewerton Fiamoncini Anssini, tenho 26 anos de idade. <br/> Atualmente estou cursando Engenharia de Software, foco meus estudos na criação de interfaces modernas e funcionais. <br />No momento, estou expandindo meus estudos do Front-end para o Back-end através do <strong>Java</strong>.',
+      'Me chamo Ewerton Fiamoncini Anssini, tenho 26 anos de idade. <br /> Atualmente estou cursando Engenharia de Software, foco meus estudos na criação de interfaces modernas e funcionais. <br />No momento, estou expandindo meus estudos do Front-end para o Back-end através do <strong>Java</strong>.',
     'skills-title': 'Minhas Techs',
     'projects-title': 'Projetos Recentes',
     'project-1-title': 'Landpage de PetShop',
@@ -71,7 +71,7 @@ const translations = {
     'btn-resume': 'Resume',
     'about-title': 'About Me',
     'about-text':
-      'My name is Ewerton Fiamoncini Anssini, I am 26 years old. <br/> Currently studying Software Engineering, I focus my studies on creating modern and functional interfaces. <br />Right now, I am expanding my horizons from Front-end to Back-end through <strong>Java</strong>.',
+      'My name is Ewerton Fiamoncini Anssini, I am 26 years old. <br /> Currently studying Software Engineering, I focus my studies on creating modern and functional interfaces. <br />Right now, I am expanding my horizons from Front-end to Back-end through <strong>Java</strong>.',
     'skills-title': 'My Techs',
     'projects-title': 'Recent Projects',
     'project-1-title': 'PetShop Landing Page',
