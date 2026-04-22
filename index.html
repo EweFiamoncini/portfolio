@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ewerton | Dev Full-Stack</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @media (max-width: 780px) {
+        .surname {
+          display: none;
+        }
+      }
+    </style>
     <script
       src="https://kit.fontawesome.com/your-code.js"
       crossorigin="anonymous"
@@ -13,9 +20,14 @@
   </head>
 
   <body>
+    <!-- Navbar -->
     <nav id="navbar">
       <div class="logo">
         <span>&lt;/&gt;</span> Ewerton <span>Fiamoncini</span>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="scrollBar"></div>
       </div>
 
       <!-- Menu hamburguer -->
@@ -35,12 +47,10 @@
           ☀️
         </button>
       </ul>
-
-      <div class="progress-container">
-        <div class="progress-bar" id="scrollBar"></div>
-      </div>
     </nav>
+    /* Fim da Navbar */
 
+    /* Conteúdo principal */
     <header id="home">
       <div class="hero-bg"></div>
       <div class="hero-content animar-entrada">
@@ -68,7 +78,9 @@
         </a>
       </div>
     </header>
+    /* Fim do conteúdo principal */
 
+    /* Conteúdo secundário */
     <section id="sobre">
       <h2 data-i18n="about-title">Sobre Mim</h2>
       <p data-i18n="about-text">
@@ -78,7 +90,9 @@
         <strong>Java</strong>.
       </p>
     </section>
+    /* Fim do conteúdo secundário */
 
+    /* Section Skills */
     <section id="skills">
       <h2 data-i18n="skills-title">Minhas Techs</h2>
       <div class="skills-grid">
@@ -99,7 +113,9 @@
         </div>
       </div>
     </section>
+    /* Fim da Section Skills */
 
+    /* Section Projetos */
     <section id="projetos">
       <h2 data-i18n="projects-title">Projetos Recentes</h2>
       <div class="project-container">
@@ -149,11 +165,15 @@
         </div>
       </div>
     </section>
+    /* Fim da Section Projetos */
 
+    /* Footer */
     <footer data-i18n="footer-text">
       &copy;2026 - Desenvolvido por <strong>Ewerton Fiamoncini Anssini</strong>
     </footer>
+    /* Fim do Footer */
 
+    /* Scripts */
     <script src="script.js"></script>
   </body>
 </html>

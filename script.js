@@ -1,17 +1,33 @@
+/* script.js - Gerencia o comportamento do menu, alternância de idioma, modo escuro e animação de digitação. */
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
+let menuTimeout;
 
+/* Fecha o menu, reseta o ícone e limpa o timer. */
+function closeMenu() {
+  navLinks?.classList.remove('show');
+  menuToggle?.classList.remove('open');
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  clearTimeout(menuTimeout);
+}
+
+// Toggle Menu
 menuToggle?.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('show');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.classList.toggle('open', isOpen);
+  const isOpen = navLinks?.classList.toggle('show');
+  menuToggle?.setAttribute('aria-expanded', String(isOpen));
+  menuToggle?.classList.toggle('open', !!isOpen);
+
+  clearTimeout(menuTimeout);
+  if (isOpen) {
+    // Fecha o menu automaticamente após 5 segundos de inatividade
+    menuTimeout = setTimeout(closeMenu, 5000);
+  }
 });
 
 // Close Menu
 navLinks?.addEventListener('click', (event) => {
   if (event.target instanceof HTMLElement && event.target.tagName === 'A') {
-    navLinks.classList.remove('show');
-    menuToggle.setAttribute('aria-expanded', 'false');
+    closeMenu();
   }
 });
 
@@ -23,7 +39,7 @@ const translations = {
     'nav-skills': 'Habilidades',
     'nav-projects': 'Projetos',
     'hero-greeting':
-      'Olá, meu nome é <br /><span>Ewerton Fiamoncini Anssini</span>',
+      'Olá, meu nome é <br /><span class="name">Ewerton</span><span class="surname"> Fiamoncini Anssini</span>',
     'btn-resume': 'Currículo',
     'about-title': 'Sobre Mim',
     'about-text':
@@ -51,7 +67,7 @@ const translations = {
     'nav-skills': 'Skills',
     'nav-projects': 'Projects',
     'hero-greeting':
-      'Hi, my name is <br /><span>Ewerton Fiamoncini Anssini</span>',
+      'Hi, my name is <br /><span class="name">Ewerton</span><span class="surname"> Fiamoncini Anssini</span>',
     'btn-resume': 'Resume',
     'about-title': 'About Me',
     'about-text':
@@ -75,9 +91,11 @@ const translations = {
   },
 };
 
+// Internationalization (i18n)
 let currentLanguage = 'pt';
 const langToggle = document.getElementById('language-toggle');
 
+// Update language
 function updateLanguage(lang) {
   currentLanguage = lang;
 
@@ -97,6 +115,7 @@ function updateLanguage(lang) {
   resetTyping();
 }
 
+// Initialize language on page load
 langToggle?.addEventListener('click', () => {
   const newLang = currentLanguage === 'pt' ? 'en' : 'pt';
   updateLanguage(newLang);
@@ -106,11 +125,13 @@ langToggle?.addEventListener('click', () => {
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const theme = localStorage.getItem('theme');
 
+// Aplica o tema salvo no localStorage
 if (theme === 'light') {
   document.body.classList.add('light-mode');
   if (darkModeToggle) darkModeToggle.textContent = '☀️';
 }
 
+/* Alterna entre os modos claro e escuro, salvando a preferência no localStorage. */
 darkModeToggle?.addEventListener('click', () => {
   const isLight = document.body.classList.toggle('light-mode');
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
@@ -125,6 +146,7 @@ let currentCharIndex = texts[0].length;
 const typingText = document.getElementById('typing-text');
 let typingTimeout;
 
+// Start typing
 function typeWriter() {
   clearTimeout(typingTimeout);
   if (currentCharIndex < texts[currentTextIndex].length) {
@@ -136,6 +158,7 @@ function typeWriter() {
   }
 }
 
+// Delete text
 function deleteText() {
   clearTimeout(typingTimeout);
   if (currentCharIndex > 0) {
@@ -151,6 +174,7 @@ function deleteText() {
   }
 }
 
+// Reset typing
 function resetTyping() {
   clearTimeout(typingTimeout);
   currentTextIndex = 0;
@@ -169,6 +193,7 @@ window.onscroll = function () {
   updateScrollProgress();
 };
 
+// Atualiza a barra de progresso de rolagem
 function updateScrollProgress() {
   const winScroll =
     document.body.scrollTop || document.documentElement.scrollTop;

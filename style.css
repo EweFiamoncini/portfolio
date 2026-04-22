@@ -1,17 +1,20 @@
-* {
+* { /* Reset CSS */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+body { /* Style Geral */
   background: #121212;
   color: #ffffff;
   line-height: 1.6;
 }
 
+/* Fim do Style Geral */
+
 /* Navbar */
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -53,6 +56,8 @@ body {
   transform: scale(0.95);
 }
 
+/* Fim do Navbar */
+
 /* Language Toggle */
 
 #language-toggle {
@@ -79,6 +84,8 @@ body {
   transform: scale(0.9);
 }
 
+/* Fim do Language Toggle */
+
 /* Dark Mode Toggle */
 
 #dark-mode-toggle {
@@ -103,6 +110,8 @@ body {
   transform: scale(0.9);
 }
 
+/* Fim do Toggle Dark Mode */
+
 /* Progress-Bar */
 .progress-container {
   width: 100%;
@@ -121,7 +130,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
 }
 
+/* Fim do Progressbar */
+
 /* Hamburger menu */
+
 #menu-toggle {
   display: none;
   flex-direction: column;
@@ -131,11 +143,6 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-}
-
-#menu-toggle:focus {
-  outline: 2px solid #00adb5;
-  outline-offset: 4px;
 }
 
 #menu-toggle .bar {
@@ -162,48 +169,12 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: flex;
-  }
+/* Fim do MenuHamburguer */
 
-  #nav-links {
-    position: fixed;
-    top: 60px;
-    right: -2px;
-    width: 150px;
-    background: rgba(31, 31, 31, 0.97);
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 10px;
-    transform: translateX(100%);
-    transition: transform 0.25s ease;
-    z-index: 999;
-  }
-
-  #nav-links button {
-    margin: 0;
-  }
-
-  #nav-links.show {
-    transform: translateX(0);
-  }
-
-  #nav-links li {
-    width: 100%;
-  }
-
-  #nav-links li a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-  }
-}
+/* Fim do Navbar */
 
 /* Hero Section */
+
 header {
   height: 100dvh; /* Usa a altura total da viewport */
   display: flex;
@@ -227,16 +198,6 @@ header {
   z-index: -1;
 
   animation: expandirBackground 20s infinite alternate ease-in-out;
-}
-
-/* Definição da animação */
-@keyframes expandirBackground {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
 }
 
 .hero-content h1 span {
@@ -269,19 +230,14 @@ header {
   animation: blink 1s infinite;
 }
 
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-
-  51%,
-  100% {
-    opacity: 0;
-  }
+.animar-entrada {
+  opacity: 0;
+  animation: fadeInUp 2s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
-/* Container da seta */
+/* seta */
+
 .scroll-arrow {
   position: absolute;
   bottom: 30px;
@@ -300,49 +256,12 @@ header {
   animation: scroll-down 2s infinite;
 }
 
-/* Animação de movimento e fade */
-@keyframes scroll-down {
-  0% {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(45deg) translate(10px, 10px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
-  }
-}
+/* Fim seta */
 
-/* Animação */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animar-entrada {
-  opacity: 0;
-  animation: fadeInUp 2s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-/* Header Resposive */
-@media (max-width: 810px) {
-  header {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
+/* Fim do Hero Section */
 
 /* Sections */
+
 section {
   width: 1000px;
   text-align: center;
@@ -350,13 +269,6 @@ section {
   padding: 50px;
 }
 
-/* Sections | Responsive */
-@media (max-width: 1000px) {
-  section {
-    width: 90%;
-    padding: 50px 30px;
-  }
-}
 
 h2 {
   text-align: center;
@@ -368,7 +280,10 @@ p {
   text-align: left;
 }
 
+/* Fim do Sections */
+
 /* Skills Grid */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 70px);
@@ -394,12 +309,14 @@ p {
   transform: scale(1.1);
 }
 
-/* Card de estudo */
-.skill-card.study {
+.skill-card.study { /* Card de estudo */
   border-color: #f39c12;
 }
 
+/* Fim do Skills Card */
+
 /* Projects */
+
 .project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -421,7 +338,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: #4f46e5; /* Um roxo mais vivo ou azul */
+  border-color: #00adb5; /* Um roxo mais vivo ou azul */
 }
 
 .project-card h3 {
@@ -439,7 +356,7 @@ p {
 
 .project-card a {
   width: fit-content;
-  color: #818cf8;
+  color: #00adb5;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -457,6 +374,10 @@ p {
   transform: scale(0.95);
 }
 
+/* Fim do Card Project */
+
+/* Footer */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -464,7 +385,10 @@ footer {
   margin-top: 40px;
 }
 
+/* Fim do Style Comum */
+
 /* Light Mode Overrides */
+
 body.light-mode {
   background: #f4f4f434;
   color: #252525;
@@ -473,6 +397,7 @@ body.light-mode {
 body.light-mode h1 span {
   color: #00adb5;
   -webkit-text-stroke: 0.2px black;
+  paint-order: stroke fill;
   text-shadow: #000000 2px 2px 10px;
 }
 
@@ -489,7 +414,7 @@ body.light-mode .btn {
 
 body.light-mode #navbar {
   background: rgba(255, 255, 255, 0.164);
-  border-color: rgba(0, 0, 0, 0.425);
+  border-color: rgba(59, 59, 59, 0.753);
 }
 
 body.light-mode #navbar ul li a {
@@ -524,6 +449,10 @@ body.light-mode .project-card {
   color: #121212;
 }
 
+body.light-mode .project-card:hover {
+  border-color: #00adb5;
+}
+
 body.light-mode .project-card h3 {
   color: #121212;
 }
@@ -537,8 +466,128 @@ body.light-mode footer {
   color: #121212;
 }
 
-@media (max-width: 768px) {
-  body.light-mode #nav-links {
-    background: rgba(255, 255, 255, 0.97);
+/* Fim do Light Mode Overrides */
+
+/* Animation moviment of fade */
+
+@keyframes scroll-down {
+  0% {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fim Animation */
+
+/* Definition animation img background */
+
+@keyframes expandirBackground {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fim Animation */
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  section {
+    width: 90%;
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 810px) {
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  #home .span .surname {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: flex;
+  }
+  
+  #nav-links {
+    position: absolute;
+    top: 59px;
+    right: -2px;
+    width: 150px;
+    background: rgba(31, 31, 31, 0.97);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    z-index: -1; /* Garante que o menu deslize por trás da barra superior do navbar */
+  }
+
+  #nav-links button {
+    margin: 0;
+  }
+
+  #nav-links.show {
+    transform: translateX(0);
+  }
+
+  #nav-links li {
+    width: 100%;
+  }
+
+  #nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  body.light-mode #nav-links {
+    background: rgba(233, 233, 233, 0.97);
+  }
+}
+
+/* Fim Responsive */
+/* Fim Css */
