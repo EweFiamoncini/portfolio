@@ -7,13 +7,13 @@
 }
 
 body {
-  /* Style Geral */
+  /* General Style */
   background: #121212;
   color: #ffffff;
   line-height: 1.6;
 }
 
-/* Fim do Style Geral */
+/* End of General Style */
 
 /* Navbar */
 
@@ -58,7 +58,7 @@ body {
   transform: scale(0.95);
 }
 
-/* Fim do Navbar */
+/* End of Navbar */
 
 /* Language Toggle */
 
@@ -86,7 +86,7 @@ body {
   transform: scale(0.9);
 }
 
-/* Fim do Language Toggle */
+/* End of Language Toggle */
 
 /* Dark Mode Toggle */
 
@@ -112,7 +112,7 @@ body {
   transform: scale(0.9);
 }
 
-/* Fim do Toggle Dark Mode */
+/* End of Dark Mode Toggle */
 
 /* Progress-Bar */
 .progress-container {
@@ -132,7 +132,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
 }
 
-/* Fim do Progressbar */
+/* End of Progress Bar */
 
 /* Hamburger menu */
 
@@ -171,14 +171,14 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Fim do MenuHamburguer */
+/* End of Hamburger Menu */
 
-/* Fim do Navbar */
+/* End of Navbar */
 
 /* Hero Section */
 
 header {
-  height: 100dvh; /* Usa a altura total da viewport */
+  height: 100dvh; /* Uses the full viewport height */
   display: flex;
   padding-top: 150px;
   padding-left: 70px;
@@ -238,7 +238,7 @@ header {
   animation-delay: 0.5s;
 }
 
-/* seta */
+/* arrow */
 
 .scroll-arrow a{
   text-decoration: none;
@@ -252,9 +252,9 @@ header {
   text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
-/* Fim seta */
+/* End arrow */
 
-/* Fim do Hero Section */
+/* End of Hero Section */
 
 /* Sections */
 
@@ -275,7 +275,7 @@ p {
   text-align: left;
 }
 
-/* Fim do Sections */
+/* End of Sections */
 
 /* Skills Grid */
 
@@ -305,11 +305,11 @@ p {
 }
 
 .skill-card.study {
-  /* Card de estudo */
+  /* Study card */
   border-color: #f39c12;
 }
 
-/* Fim do Skills Card */
+/* End of Skills Card */
 
 /* Projects */
 
@@ -370,7 +370,7 @@ p {
   transform: scale(0.95);
 }
 
-/* Fim do Card Project */
+/* End of Project Card */
 
 /* Footer */
 
@@ -381,7 +381,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Fim do Style Comum */
+/* End of Common Style */
 
 /* Light Mode Overrides */
 
@@ -462,12 +462,12 @@ body.light-mode footer {
   color: #121212;
 }
 
-/* Fim do Light Mode Overrides */
+/* End of Light Mode Overrides */
 
-/* Animation moviment of fade */
+/* Fade movement animation */
 
 
-@keyframes scroll-down { /* Animation of down */
+@keyframes scroll-down { /* Scroll down animation */
   50% {
     opacity: 1;
     transform: translate(0px, 10px);
@@ -485,9 +485,9 @@ body.light-mode footer {
   }
 }
 
-/* Fim Animation */
+/* End Animation */
 
-/* Definition animation img background */
+/* Background image animation definition */
 
 @keyframes expandirBackground {
   0% {
@@ -510,7 +510,7 @@ body.light-mode footer {
   }
 }
 
-/* Fim Animation */
+/* End Animation */
 
 /* Responsive */
 
@@ -556,7 +556,7 @@ body.light-mode footer {
     gap: 10px;
     transform: translateX(100%);
     transition: transform 0.25s ease;
-    z-index: -1; /* Garante que o menu deslize por trás da barra superior do navbar */
+    z-index: -1; /* Ensures the menu slides behind the navbar top bar */
   }
 
   #nav-links button {
@@ -582,5 +582,5 @@ body.light-mode footer {
   }
 }
 
-/* Fim Responsive */
-/* Fim Css */
+/* End Responsive */
+/* End Css */
