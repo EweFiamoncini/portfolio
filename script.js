@@ -1,9 +1,9 @@
-/* script.js - Gerencia o comportamento do menu, alternância de idioma, modo escuro e animação de digitação. */
+/* script.js - Manages menu behavior, language switching, dark mode, and typing animation. */
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 let menuTimeout;
 
-/* Fecha o menu, reseta o ícone e limpa o timer. */
+/* Closes the menu, resets the icon, and clears the timer. */
 function closeMenu() {
   navLinks?.classList.remove('show');
   menuToggle?.classList.remove('open');
@@ -19,7 +19,7 @@ menuToggle?.addEventListener('click', () => {
 
   clearTimeout(menuTimeout);
   if (isOpen) {
-    // Fecha o menu automaticamente após 5 segundos de inatividade
+    // Automatically closes the menu after 5 seconds of inactivity
     menuTimeout = setTimeout(closeMenu, 5000);
   }
 });
@@ -125,13 +125,13 @@ langToggle?.addEventListener('click', () => {
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const theme = localStorage.getItem('theme');
 
-// Aplica o tema salvo no localStorage
+// Applies the theme saved in localStorage
 if (theme === 'light') {
   document.body.classList.add('light-mode');
   if (darkModeToggle) darkModeToggle.textContent = '☀️';
 }
 
-/* Alterna entre os modos claro e escuro, salvando a preferência no localStorage. */
+/* Toggles between light and dark modes, saving the preference in localStorage. */
 darkModeToggle?.addEventListener('click', () => {
   const isLight = document.body.classList.toggle('light-mode');
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
@@ -193,7 +193,7 @@ window.onscroll = function () {
   updateScrollProgress();
 };
 
-// Atualiza a barra de progresso de rolagem
+// Updates the scroll progress bar
 function updateScrollProgress() {
   const winScroll =
     document.body.scrollTop || document.documentElement.scrollTop;
