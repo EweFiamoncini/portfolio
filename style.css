@@ -536,7 +536,11 @@ body.light-mode footer {
     display: none;
   }
 
-  .surnameTwo {
+  .hero-content {
+    margin: 120px 10px;
+  }
+
+  .surname, .surnameTwo {
     display: none;
   }
 
@@ -580,16 +584,6 @@ body.light-mode footer {
 
   body.light-mode #nav-links {
     background: rgba(233, 233, 233, 0.97);
-  }
-}
-
-@media (max-width: 650px) {
-  .surname {
-    display: none;
-  }
-
-  .hero-content {
-    margin: 120px 10px;
   }
 }
 
