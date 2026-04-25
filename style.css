@@ -1,11 +1,13 @@
-* { /* Reset CSS */
+* {
+  /* Reset CSS */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body { /* Style Geral */
+body {
+  /* Style Geral */
   background: #121212;
   color: #ffffff;
   line-height: 1.6;
@@ -238,22 +240,16 @@ header {
 
 /* seta */
 
-.scroll-arrow {
+.scroll-arrow a{
+  text-decoration: none;
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   left: 50%;
-  transform: translateX(-50%);
   cursor: pointer;
-}
-
-.scroll-arrow span {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-bottom: 3px solid #00ced1;
-  border-right: 3px solid #00ced1;
-  transform: rotate(45deg);
   animation: scroll-down 2s infinite;
+  font-size: 2rem;
+  color: #00adb5;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 /* Fim seta */
@@ -268,7 +264,6 @@ section {
   margin: auto;
   padding: 50px;
 }
-
 
 h2 {
   text-align: center;
@@ -309,7 +304,8 @@ p {
   transform: scale(1.1);
 }
 
-.skill-card.study { /* Card de estudo */
+.skill-card.study {
+  /* Card de estudo */
   border-color: #f39c12;
 }
 
@@ -470,18 +466,11 @@ body.light-mode footer {
 
 /* Animation moviment of fade */
 
-@keyframes scroll-down {
-  0% {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
-  }
+
+@keyframes scroll-down { /* Animation of down */
   50% {
     opacity: 1;
-    transform: rotate(45deg) translate(10px, 10px);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
+    transform: translate(0px, 10px);
   }
 }
 
@@ -543,13 +532,17 @@ body.light-mode footer {
   #home .span .surname {
     display: none;
   }
+
+  .surname {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   #menu-toggle {
     display: flex;
   }
-  
+
   #nav-links {
     position: absolute;
     top: 59px;
