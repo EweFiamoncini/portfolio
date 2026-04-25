@@ -1,48 +1,50 @@
-# 👨‍💻 Ewerton Fiamoncini | Portfólio Pessoal
+# 👨‍💻 Ewerton Fiamoncini | Personal Portfolio
 
-Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido para centralizar meus projetos, experiências e formas de contato de maneira profissional e intuitiva.
+This repository contains the source code for my personal portfolio, developed to centralize my projects, experiences, and contact methods in a professional and intuitive way.
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
-O projeto foi construído utilizando tecnologias fundamentais da web para garantir performance e um design responsivo:
+The project was built using fundamental web technologies to ensure performance and a responsive design:
 
-- **HTML5**: Estruturação semântica do conteúdo.
-- **CSS3**: Estilização personalizada e layout responsivo.
-- **JavaScript**: Lógica de interatividade e dinamismo da página.
+- **HTML5**: Semantic content structuring.
+- **CSS3**: Custom styling and responsive layout.
+- **JavaScript**: Interactivity logic and page dynamism.
 
-## 📱 Funcionalidades
+## 📱 Features
 
-- **Apresentação Profissional**: Uma seção dedicada a contar um pouco sobre minha trajetória e foco atual em Engenharia de Software.
-- **Exposição de Projetos**: Vitrine dos principais trabalhos desenvolvidos (Backend com Java, automações e sistemas web).
-- **Design Responsivo**: Adaptado para diferentes tamanhos de tela (desktop, tablets e smartphones).
-- **Links Rápidos**: Acesso direto ao LinkedIn, GitHub e outras redes de contato.
+- **Professional Presentation**: A dedicated section to tell a bit about my trajectory and current focus on Software Engineering.
+- **Project Showcase**: A showcase of the main works developed (Backend with Java, automations, and web systems).
+- **Responsive Design**: Adapted for different screen sizes (desktop, tablets, and smartphones).
+- **Quick Links**: Direct access to LinkedIn, GitHub, and other contact networks.
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 
-O projeto segue uma estrutura simples e organizada:
+The project follows a simple and organized structure:
 
-- `index.html`: Arquivo principal contendo a estrutura da página.
-- `style.css`: Folha de estilo responsável pelo layout e design visual.
-- `script.js`: Arquivo de scripts para interações dinâmicas.
-- `background.png` / `favicon.png`: Elementos visuais e identidade da página.
+- `index.html`: Main file containing the page structure.
+- `style.css`: Stylesheet responsible for layout and visual design.
+- `script.js`: Script file for dynamic interactions.
+- `background.png` / `favicon.png`: Visual elements and page identity.
 
-## 🛠️ Como visualizar localmente
+## 🛠️ How to View Locally
 
-1. Clone o repositório:
+1. Clone the repository:
    ```bash
-   git clone [https://github.com/EweFiamoncini/portfolio.git](https://github.com/EweFiamoncini/portfolio.git)
+   git clone [<https://github.com/EweFiamoncini/portfolio.git](https://github.com/EweFiamoncini/portfolio.git)>
+   ```
 
-2. Acesse a pasta do projeto:
+2. Access the project folder:
    ```bash
    cd portfolio
+   ```
 
-3. Abra o arquivo index.html em qualquer navegador moderno.
+3. Open the index.html file in any modern browser.
 
-## 📩 Contato
+## 📩 Contact
 
-Se você gostou do meu trabalho ou quer trocar uma ideia sobre tecnologia e desenvolvimento, sinta-se à vontade para me contatar:
+If you liked my work or want to exchange ideas about technology and development, feel free to contact me:
 
-- **LinkedIn**: [Ewerton Fiamoncini](https://www.linkedin.com/in/ewertonfiamoncini/)
-- **Instagram**: [Fiamoncini Dev](https://www.instagram.com/fiamoncini.dev/)
+- **LinkedIn**: Ewerton Fiamoncini
+- **Instagram**: Fiamoncini Dev
 
-Desenvolvido com ☕ por **Ewerton Fiamoncini**
+Developed with ☕ by **Ewerton Fiamoncini**
