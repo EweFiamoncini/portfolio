@@ -39,7 +39,7 @@ const translations = {
     'nav-skills': 'Habilidades',
     'nav-projects': 'Projetos',
     'hero-greeting':
-      'Olá, meu nome é <br /><span class="name">Ewerton</span><span class="surname"> Fiamoncini Anssini</span>',
+      'Olá, meu nome é',
     'btn-resume': 'Currículo',
     'about-title': 'Sobre Mim',
     'about-text':
@@ -67,7 +67,7 @@ const translations = {
     'nav-skills': 'Skills',
     'nav-projects': 'Projects',
     'hero-greeting':
-      'Hi, my name is <br /><span class="name">Ewerton</span><span class="surname"> Fiamoncini Anssini</span>',
+      'Hi, my name is',
     'btn-resume': 'Resume',
     'about-title': 'About Me',
     'about-text':
