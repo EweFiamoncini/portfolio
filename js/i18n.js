@@ -16,7 +16,6 @@ export function updateLanguage(lang) {
       element.innerHTML = translation;
     }
 
-    // Atualiza o link (href) se houver uma chave correspondente com sufixo -link
     const linkKey = `${key}-link`;
     if (translations[lang][linkKey] && element.tagName === 'A') {
       element.href = translations[lang][linkKey];
