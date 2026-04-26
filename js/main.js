@@ -9,8 +9,8 @@ function init() {
   initMenu();
   initTheme();
   initScroll();
-  initLanguage();
-  initTyping(translations.pt['typing-texts']);
+  initTyping([]); // Inicializa vazio
+  initLanguage(); // initLanguage chamará updateLanguage e setTexts com o idioma correto (local ou salvo)
 }
 
 init();
