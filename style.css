@@ -369,7 +369,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: var(--color-primary); /* Um roxo mais vivo ou azul */
+  border-color: var(--color-primary);
 }
 
 .project-card h3 {
