@@ -4,13 +4,15 @@ import { initTheme } from './theme.js';
 import { initTyping } from './typing.js';
 import { initScroll } from './scroll.js';
 import { translations } from './translations.js';
+import { loadGitHubProjects } from '../github.js';
 
 function init() {
   initMenu();
   initTheme();
   initScroll();
   initTyping([]); 
-  initLanguage(); 
+  initLanguage();
+  loadGitHubProjects('EweFiamoncini');
 }
 
 init();
