@@ -4,7 +4,7 @@ import { initTheme } from './theme.js';
 import { initTyping } from './typing.js';
 import { initScroll } from './scroll.js';
 import { translations } from './translations.js';
-import { loadGitHubProjects } from '../github.js';
+import { loadGitHubProjects } from './github.js';
 
 function init() {
   initMenu();
