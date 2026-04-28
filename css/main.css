@@ -385,22 +385,30 @@ p {
   line-height: 1.6;
 }
 
-.project-card a {
-  width: fit-content;
+.project-links {
+  margin-top: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
   color: var(--color-primary);
   text-decoration: none;
-  font-weight: 500;
   font-size: 0.9rem;
-  margin-top: auto;
+  margin: auto;
+  padding: 8px;
+  display: flex;
   transition: 0.3s ease;
 }
 
-.project-card a:hover {
-  color: var(--color-primary-light);
-  transform: scale(1.05);
+.project-links a:hover {
+  color: var(--text-main);
+  background-color: var(--color-primary);
 }
 
-.project-card a:active {
+.project-links a:active {
   color: #818cf8;
   transform: scale(0.95);
 }
