@@ -1,6 +1,19 @@
 import { translations } from './translations.js';
 import { currentLanguage } from './i18n.js';
 
+const getLanguageIcon = (lang) => {
+  const icons = {
+    'JavaScript': '<i class="fab fa-js" style="color: #f7df1e;"></i>',
+    'TypeScript': '<i class="fab fa-js-square" style="color: #3178c6;"></i>',
+    'HTML': '<i class="fab fa-html5" style="color: #e34f26;"></i>',
+    'CSS': '<i class="fab fa-css3-alt" style="color: #1572b6;"></i>',
+    'Java': '<i class="fab fa-java" style="color: #007396;"></i>',
+    'Python': '<i class="fab fa-python" style="color: #3776ab;"></i>',
+    'PHP': '<i class="fab fa-php" style="color: #777bb4;"></i>',
+  };
+  return icons[lang] || '<i class="fas fa-code"></i>';
+};
+
 export async function loadGitHubProjects(username) {
   const container = document.getElementById('github-projects');
   if (!container) return;
@@ -20,13 +33,9 @@ export async function loadGitHubProjects(username) {
         return `
           <div class="project-card">
             
-            <h3>${repo.name.replace(/-/g, ' ')}</h3>
+            <h3>${repo.name.replace(/-/g, ' ')} ${repo.language ? `<span>${getLanguageIcon(repo.language)}</span>` : ''}</h3>
             
             <p>${repo.description}</p>            
-
-            <div class="project-techs">
-              ${repo.language ? `<span>${repo.language}</span>` : ''}
-            </div>
             
             <div class="project-links">
               <a href="${repo.html_url}" title="Repository" target="_blank" data-i18n="view-repo">
