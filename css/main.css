@@ -358,7 +358,7 @@ p {
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-primary);
-  background: var(--border-dark);
+  box-shadow: 0px 10px 10px var(--color-primary);
 }
 
 .project-card h3 {
@@ -381,6 +381,7 @@ p {
 }
 
 .project-links a {
+  display: inline-block;
   border: 1px solid var(--color-primary);
   border-radius: 5px;
   color: var(--color-primary);
@@ -395,6 +396,8 @@ p {
 .project-links a:hover {
   color: var(--text-main);
   background-color: var(--color-primary);
+  box-shadow: 0px 10px 10px rgba(0, 173, 181, 0.4);
+  transform: scale(1.1);
 }
 
 .project-links a:active {
