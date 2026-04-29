@@ -16,8 +16,15 @@ export async function loadGitHubProjects(username) {
       .map(repo => {
         return `
           <div class="project-card">
+            
             <h3>${repo.name.replace(/-/g, ' ')}</h3>
-            <p>${repo.description}</p>
+            
+            <p>${repo.description}</p>            
+
+            <div class="project-techs">
+              ${repo.language ? `<span>${repo.language}</span>` : ''}
+            </div>
+            
             <div class="project-links">
               <a href="${repo.html_url}" title="Repository" target="_blank" data-i18n="view-repo">
                 Repositório
@@ -27,13 +34,12 @@ export async function loadGitHubProjects(username) {
                   Online
                 </a>` : ''}
             </div>
-          </div>
+          
+            </div>
         `;
       })
       .join('');
 
-    // Dica: Se você tiver uma função de tradução no main.js, 
-    // chame-a aqui para traduzir os botões injetados.
   } catch (error) {
     console.error('GitHub API Error:', error);
     container.innerHTML = '<p>Não foi possível carregar os projetos no momento.</p>';

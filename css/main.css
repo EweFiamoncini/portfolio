@@ -374,6 +374,12 @@ p {
   line-height: 1.6;
 }
 
+.project-techs {
+  margin-top: auto;
+  
+}
+
+
 .project-links {
   margin-top: auto;
   display: flex;
