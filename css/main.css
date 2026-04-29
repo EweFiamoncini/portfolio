@@ -136,6 +136,34 @@ body {
   cursor: pointer;
 }
 
+/* Posicionamento do botão */
+.botao-tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Criando a caixa da mensagem */
+.botao-tooltip::after {
+  content: attr(data-tooltip); /* Pega o texto do HTML */
+  position: absolute;
+  bottom: 125%; /* Aparece acima do botão */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0; /* Escondido por padrão */
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* Mostra quando o mouse passa por cima */
+.botao-tooltip:hover::after {
+  opacity: 1;
+}
+
 #menu-toggle .bar {
   display: block;
   width: 100%;

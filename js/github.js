@@ -19,11 +19,11 @@ export async function loadGitHubProjects(username) {
             <h3>${repo.name.replace(/-/g, ' ')}</h3>
             <p>${repo.description}</p>
             <div class="project-links">
-              <a href="${repo.html_url}" target="_blank" data-i18n="view-repo">
+              <a href="${repo.html_url}" title="Repository" target="_blank" data-i18n="view-repo">
                 Repositório
               </a>
               ${repo.homepage ? `
-                <a href="${repo.homepage}" target="_blank" data-i18n="view-online">
+                <a href="${repo.homepage}" title="Visit Website" target="_blank" data-i18n="view-online">
                   Online
                 </a>` : ''}
             </div>
