@@ -1,3 +1,6 @@
+import { translations } from './translations.js';
+import { currentLanguage } from './i18n.js';
+
 export async function loadGitHubProjects(username) {
   const container = document.getElementById('github-projects');
   if (!container) return;
@@ -27,11 +30,11 @@ export async function loadGitHubProjects(username) {
             
             <div class="project-links">
               <a href="${repo.html_url}" title="Repository" target="_blank" data-i18n="view-repo">
-                Repositório
+                ${translations[currentLanguage]['view-repo']}
               </a>
               ${repo.homepage ? `
                 <a href="${repo.homepage}" title="Visit Website" target="_blank" data-i18n="view-online">
-                  Online
+                  ${translations[currentLanguage]['view-online']}
                 </a>` : ''}
             </div>
           

@@ -1,12 +1,16 @@
 import { translations } from './translations.js';
 import { resetTyping, setTexts } from './typing.js';
 
-let currentLanguage = localStorage.getItem('portfolio-lang') || 'pt';
+const getSettings = () => JSON.parse(localStorage.getItem('portfolio-settings') || '{}');
+export let currentLanguage = getSettings().lang || 'pt';
 const langToggle = document.getElementById('language-toggle');
 
 export function updateLanguage(lang) {
   currentLanguage = lang;
-  localStorage.setItem('portfolio-lang', lang);
+
+  const settings = getSettings();
+  settings.lang = lang;
+  localStorage.setItem('portfolio-settings', JSON.stringify(settings));
 
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     const key = element.getAttribute('data-i18n');

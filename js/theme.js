@@ -1,7 +1,8 @@
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
 export function initTheme() {
-  const theme = localStorage.getItem('theme');
+  const getSettings = () => JSON.parse(localStorage.getItem('portfolio-settings') || '{}');
+  const theme = getSettings().theme;
 
   if (theme === 'light') {
     document.body.classList.add('light-mode');
@@ -10,7 +11,11 @@ export function initTheme() {
 
   darkModeToggle?.addEventListener('click', () => {
     const isLight = document.body.classList.toggle('light-mode');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    
+    const settings = getSettings();
+    settings.theme = isLight ? 'light' : 'dark';
+    localStorage.setItem('portfolio-settings', JSON.stringify(settings));
+
     if (darkModeToggle) darkModeToggle.textContent = isLight ? '🌑' : '☀️';
   });
 }
