@@ -66,26 +66,40 @@ body {
   color: var(--color-primary);
 }
 
-#navbar ul {
+#nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-#navbar ul li a {
-  color: white;
+#nav-links li a, #nav-links button {
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 5px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  margin-right: 10px;
   text-decoration: none;
-  padding: 0 15px;
-  transition: transform 0.3s ease;
 }
 
-#navbar ul li a:hover {
-  color: var(--color-primary);
+#nav-links button {
+  padding: 5px;
+}
+
+#nav-links li a:hover, #nav-links button:hover {
+  color: var(--text-main);
+  background-color: var(--color-primary);
+  box-shadow: 0px 10px 10px rgba(0, 173, 181, 0.4);
+  cursor: pointer;
   transform: scale(1.1);
-}
-
-#navbar ul li a:active {
-  color: var(--color-primary);
-  transform: scale(0.95);
 }
 
 
