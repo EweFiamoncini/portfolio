@@ -66,39 +66,80 @@ body {
   color: var(--color-primary);
 }
 
-#nav-links {
+#navbar ul {
   display: flex;
-  align-items: center;
   list-style: none;
-  transition: all 0.3s ease;
 }
 
-#nav-links li a, button {
-  display: inline-block;
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+#navbar ul li a:active {
+  color: var(--color-primary);
+  transform: scale(0.95);
+}
+
+/* End of Navbar */
+
+/* Language Toggle */
+
+#language-toggle {
   background: transparent;
   border: 1.5px solid var(--color-primary);
   color: var(--color-primary);
+  padding: 5px 12px;
   border-radius: 5px;
-  padding: 4px 10px;
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
   margin-right: 10px;
-  text-decoration: none;
 }
 
-#nav-links button {
-  padding: 5px;
-}
-
-#nav-links li a:hover, button:hover {
+#language-toggle:hover {
+  background: var(--color-primary);
   color: var(--text-main);
-  background-color: var(--color-primary);
-  box-shadow: 0px 10px 10px rgba(0, 173, 181, 0.4);
+  box-shadow: 0 0 12px rgba(0, 173, 181, 0.4);
+}
+
+#language-toggle:active {
+  transform: scale(0.9);
+}
+
+/* End of Language Toggle */
+
+/* Dark Mode Toggle */
+
+#dark-mode-toggle {
+  background: transparent;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 5px 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transform: scale(1.1);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+#dark-mode-toggle:hover {
+  background: var(--color-primary);
+  color: var(--text-main);
+  box-shadow: 0 0 12px rgba(0, 173, 181, 0.4);
+}
+
+#dark-mode-toggle:active {
+  transform: scale(0.9);
 }
 
 /* End of Navbar */
@@ -134,34 +175,6 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-}
-
-/* Posicionamento do botão */
-.botao-tooltip {
-  position: relative;
-  cursor: pointer;
-}
-
-/* Criando a caixa da mensagem */
-.botao-tooltip::after {
-  content: attr(data-tooltip); /* Pega o texto do HTML */
-  position: absolute;
-  bottom: 125%; /* Aparece acima do botão */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0; /* Escondido por padrão */
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-/* Mostra quando o mouse passa por cima */
-.botao-tooltip:hover::after {
-  opacity: 1;
 }
 
 #menu-toggle .bar {
