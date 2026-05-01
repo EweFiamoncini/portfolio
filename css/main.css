@@ -294,8 +294,9 @@ header {
 .scroll-arrow a{
   text-decoration: none;
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
   animation: scroll-down 2s infinite;
   font-size: 2rem;
@@ -564,9 +565,12 @@ body.light-mode footer {
 
 
 @keyframes scroll-down { /* Scroll down animation */
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
   50% {
     opacity: 1;
-    transform: translate(0px, 10px);
+    transform: translate(-50%, 10px);
   }
 }
 
